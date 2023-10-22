@@ -1,11 +1,10 @@
-<?php
-
-namespace App\Core\Views;
+<? namespace App\Core\Views;
 
 class View
 {
     private string $templateName;
     private string $viewName;
+    private array $data = [];
 
     public function __construct(string $viewName, string $templateName = "back")
     {
@@ -13,9 +12,6 @@ class View
         $this->setTemplateName($templateName);
     }
 
-    /**
-     * @param String $templateName
-     */
     public function setTemplateName(string $templateName): void
     {
         if(!file_exists("../Views/templates/".$templateName.".tpl.php"))
@@ -25,9 +21,6 @@ class View
         $this->templateName = "../Views/templates/".$templateName.".tpl.php";
     }
 
-    /**
-     * @param String $viewName
-     */
     public function setViewName(string $viewName): void
     {
         if(!file_exists("../Views/".$viewName.".view.php"))
@@ -37,10 +30,14 @@ class View
         $this->viewName = "../Views/".$viewName.".view.php";
     }
 
-    public function __destruct()
+    public function setData(array $data): void
     {
+        $this->data = $data;
+    }
+
+    public function render(): void
+    {
+        extract($this->data);
         include $this->templateName;
     }
 }
-
-
