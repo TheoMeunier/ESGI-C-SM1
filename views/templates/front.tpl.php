@@ -30,8 +30,6 @@
 </main>
 <footer>
 	<div class="content">
-		<img src="https://png.pngtree.com/png-vector/20220907/ourmid/pngtree-camera-icon-design-png-image_6141281.png"
-		     alt="" style="filter: invert(1)">
 		<div class="category">
 			<section>
 				<h2>Catégorie</h2>

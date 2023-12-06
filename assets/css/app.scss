@@ -7,43 +7,24 @@
 @import "components/gallery-modal";
 @import "gallery.scss";
 @import "artist.scss";
+@import "components/form";
+@import "components/_main-back";
+@import "components/_main-front";
 
-main {
-  margin: 0 auto;
-  min-height: 90vh;
-  padding: 5rem 10rem;
-  background: #f2f2f2;
-}
+  p {
+    text-align: justify;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
 
-main h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-main section img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  vertical-align: middle;
-}
-
-main h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-main section {
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-main p {
-  text-align: justify;
-  padding: 2rem;
-  margin: 2rem auto;
-}
-
+  a {
+    color: #000;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: solid .2rem #000;
+    margin: 1rem 0;
+  }
 main fieldset{
   border: none;
 }
@@ -80,16 +61,6 @@ main form input {
   border: solid .2rem #000;
 }
 
-main form input[type="submit"] {
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  width: 100%;
-  border: solid .2rem #000;
-  background-color: #000;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 main fieldset label{
   font-weight: bold;

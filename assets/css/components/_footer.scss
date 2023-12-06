@@ -1,13 +1,13 @@
 /* FOOTER */
 footer {
-  background-color: #121212;
-  color: #fff;
+  background-color: var(--black-light);
+  color: var(--white);
   width: 100%;
 
   .content {
-    display: flex;
     padding: 2rem 1rem;
     align-items: center;
+    margin: 0 auto;
     img {
       display: flex;
       width: 45rem;
@@ -22,7 +22,7 @@ footer {
     }
 
     a {
-      color: #fff;
+      color: var(--white);
       font-weight: bold;
       text-decoration: none;
     }
@@ -51,10 +51,10 @@ footer {
     .category {
       display: flex;
       justify-content: center;
+      gap: 10rem;
       section{
         display: flex;
         flex-direction: column;
-        width: 25rem;
         h2 {
           font-weight: bold;
           margin: 1rem 0;
@@ -63,7 +63,7 @@ footer {
           li{
             margin: 1rem 0;
             a {
-              color: #fff;
+              color: var(--white);
               font-weight: lighter;
               text-decoration: none;
             }
@@ -77,7 +77,7 @@ footer {
   .mention-legale {
     display: flex;
     justify-content: space-between;
-    background: black;
+    background: var(--black);
     padding: 2rem 5rem;
 
     ul {

@@ -1,0 +1,47 @@
+.main-front{
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 5rem 10rem;
+  background: var(--gray);
+
+  h1, h2 {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+    margin: 2rem 0;
+
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    text-align: justify;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  a {
+    color: var(--black);
+    font-weight: bold;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: solid .2rem var(--black);
+    margin: 1rem 0;
+  }
+}
+
