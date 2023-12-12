@@ -1,21 +1,31 @@
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
+fieldset{
+  margin: 0 auto;
+  max-width: 90rem;
+  border: none;
 
-  input {
-    padding: 1rem 2rem;
-    margin: 1rem 0;
-    width: 100%;
-    border: solid .2rem #000;
-
-    &[type="submit"], &[type="button"], &[type="reset"] {
-      background-color: #000;
-      color: #fff;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    label{
       font-weight: bold;
-      cursor: pointer;
+      display: flex;
+      justify-content: start;
+    }
+    input {
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      width: 100%;
+      border: solid .2rem #000;
+
+      &[type="submit"], &[type="button"], &[type="reset"] {
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
     }
   }
 }
