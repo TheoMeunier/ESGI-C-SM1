@@ -1,0 +1,23 @@
+.alert {
+  padding: .5rem;
+
+  &-success {
+    background-color: var(--success);
+    color: var(--white);
+  }
+
+  &-error {
+    background-color: var(--error);
+    color: var(--white);
+  }
+
+  &-warning {
+    background-color: var(--warning);
+    color: var(--black-light);
+  }
+
+  &-info {
+    background-color: var(--info);
+    color: var(--white);
+  }
+}

@@ -1,10 +1,3 @@
-<?php
-
-use App\Form\Auth\RegisterType;
-
-$form   = new RegisterType();
-$config = $form->getConfig();
-?>
 <section>
 	<fieldset>
 		<legend><h2>S'inscrire</h2></legend>
