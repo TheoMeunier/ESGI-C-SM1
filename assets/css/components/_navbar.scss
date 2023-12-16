@@ -1,0 +1,24 @@
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+  width: 100%;
+}
+nav ul li{
+  margin: 1rem;
+  border-bottom: .1rem solid #000;
+}
+nav ul li:hover{
+  margin: 1rem;
+  background: #111;
+  & a {
+    color: #fff;
+  }
+}
+nav ul li a{
+  color: #000;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+}

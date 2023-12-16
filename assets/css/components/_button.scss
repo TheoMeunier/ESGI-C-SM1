@@ -1,0 +1,12 @@
+.button {
+  font-weight: bold;
+  cursor: pointer;
+  &--black {
+    background-color: #000;
+    color: #fff;
+  }
+  &--white {
+    background-color: #fff;
+    color: #000;
+  }
+}
