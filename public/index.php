@@ -11,10 +11,6 @@ use Core\Router\Router;
 
 require __DIR__.'/../vendor/autoload.php';
 
-// Start read config file
-$config = new ConfigLoader();
-$config->load();
-
 $router = new Router();
 
 $router->get('/', [MainController::class, 'home']);

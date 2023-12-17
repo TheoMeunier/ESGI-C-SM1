@@ -1,25 +1,11 @@
-<?php include '../views/component/meta.php'; ?>
+<?php echo $this->includeComponent('meta', $config = []); ?>
 <body>
 <header>
-	<nav>
-		<ul>
-			<li><a href="/">accueil</a></li>
-			<li><a href="/gallery">portfolio</a></li>
-		</ul>
-	</nav>
-	<h1>Template Back</h1>
-	<nav>
-		<ul>
-			<li><a href="/contact">contact</a></li>
-			<li><a href="/a-propos">a-propos</a></li>
-		</ul>
-	</nav>
+    <?php echo $this->includeComponent('navbar', $config = []); ?>
 </header>
-<main class="main-back">
+<main>
     <?php include $this->viewName; ?>
 </main>
-<footer>
-	<p>&copy; - Tous droits réservés - 2023</p>
-</footer>
+<?php echo $this->includeComponent('footer', $config = []); ?>
 </body>
 </html>

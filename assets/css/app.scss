@@ -1,16 +1,18 @@
 @import "partials/variables";
 @import "partials/reset";
 @import "partials/fonts";
+@import "partials/mixins";
+@import "partials/functions";
+@import "partials/grid";
 
 @import "components/header";
 @import "components/alerts";
 @import "components/buttons";
 @import "components/footer";
+@import "components/icons";
 @import "components/gallery-card";
 @import "components/gallery-photo";
 @import "components/gallery-modal";
-@import "gallery.scss";
-@import "artist.scss";
 @import "components/form";
-@import "components/_main-back";
-@import "components/_main-front";
+@import "components/tableau";
+@import "components/main";

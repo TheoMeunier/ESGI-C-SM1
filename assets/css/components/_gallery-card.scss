@@ -1,83 +1,47 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--gray);
+  border-radius: .25rem;
 
-$primary-color: #03bfbc;
-$secondary-color: #292343;
-$background-color: #28223f;
+  .profile-image {
+    border-radius: 50%;
+    max-width: 16rem;
+    height: 16rem;
+  }
 
+  .profile-info {
+    margin-left: 1rem;
+    padding: 2rem;
 
+    .profile-name {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
 
-.container {
-  user-select: none;
-  margin: 100px auto;
-  background: #231e39;
-  color: #b3b8cd;
-  border-radius: 5px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .75);
-  
-  i {
-    padding-left: 20px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: .5s;
-    
-    &:hover {
-      color: $primary-color;
+    .profile-title {
+      color: grey;
+    }
+
+    .profile-interests-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-interests-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      li {
+        display: inline-block;
+        background: #eee;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        box-shadow: .25rem .25rem 0 var(--dark-gray);
+      }
     }
   }
-}
-
-.cover-photo {
-  background: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
-  height: 160px;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
-
-.profile {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  margin: 93px 0 0 -175px;
-  border: 1px solid #1f1a32;
-  padding: 7px;
-  background: $secondary-color;
-}
-
-.profile-name {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 27px 0 0 120px;
-}
-
-.about {
-  margin-top: 35px;
-  line-height: 21px;
-  text-align: center;
-}
-
-button {
-  margin: 10px 0 40px 0;
-}
-
-.msg-btn, .follow-btn {
-  background: $primary-color;
-  border: 1px solid $primary-color;
-  padding: 10px 25px;
-  color: #231e39;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.follow-btn {
-  margin-left: 10px;
-  background: transparent;
-  color: darken($primary-color, 10%); // Using SASS function to darken the color
-}
-
-.follow-btn:hover {
-  color: #231e39;
-  background: $primary-color;
-  transition: .5s;
 }

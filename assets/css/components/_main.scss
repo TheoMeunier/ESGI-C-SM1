@@ -1,7 +1,9 @@
-.main-back{
+main{
   margin: 0 auto;
   min-height: 90vh;
   padding: 5rem 10rem;
+  border-top: var(--dark-gray) solid .2rem;
+  border-bottom: var(--dark-gray) solid .2rem;
   background: var(--gray);
 
   h1, h2 {
@@ -31,16 +33,13 @@
 
   p {
     text-align: justify;
-    padding: 2rem;
     margin: 2rem auto;
   }
 
   a {
-    color: #000;
+    color: var(--black);
     font-weight: bold;
     display: inline-block;
-    padding: 1rem 2rem;
-    border: solid .2rem #000;
     margin: 1rem 0;
   }
 }

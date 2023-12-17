@@ -1,12 +1,47 @@
 .button {
   font-weight: bold;
+  display: inline-block;
   cursor: pointer;
-  &--black {
-    background-color: #000;
-    color: #fff;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  background: var(--white);
+  color: var(--black);
+  border: .15rem solid var(--black);
+  box-shadow: .5rem .5rem 0 var(--black);
+  border-radius: .25rem;
+
+
+  &-black {
+    background-color: var(--black);
+    color: var(--white);
+    &:hover {
+      background-color: var(--white);
+      color: var(--black);
+    }
   }
-  &--white {
-    background-color: #fff;
-    color: #000;
+
+  &-white {
+    background-color: var(--white);
+    color: var(--black);
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+  &-green{
+    background-color: var(--success);
+    color: var(--white);
+    box-shadow: none;
+    &:hover {
+      background-color: var(--success-dark);
+    }
+  }
+
+  &-md {
+    padding: 1rem 2rem;
+  }
+
+  &-lg {
+    padding: 1.5rem 3rem;
   }
 }

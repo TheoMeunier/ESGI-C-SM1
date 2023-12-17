@@ -1,5 +1,5 @@
 import '../css/app.scss';
-import './artist.js';
-import './gallery.js';
-import './header.js';
+import './components/artist.js';
+import './components/gallery.js';
+import './components/header.js';
 console.log('Hello World');

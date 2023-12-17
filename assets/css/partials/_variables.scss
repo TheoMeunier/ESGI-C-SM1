@@ -1,11 +1,33 @@
 /*Variables*/
-:root{
-  --black: #000;
-  --gray: #f2f2f2;
-  --white: #fff;
-  --black-light: #121212;
-  --success: #28a745;
-  --error: #dc3545;
-  --warning: #ffc107;
-  --info: #17a2b8;
+$black: #000;
+$gray: #fafafa;
+$white: #fff;
+$dark-gray: darken(#f2f2f2, 10%);
+$black-light: #121212;
+$success: #1ca93c;
+$error: #de2335;
+$warning: #eea43c;
+$info: #12a1b7;
+$primary-color: #f2f2f2;
+$secondary-color: #222222;
+$background-color: #222222;
+
+/*Root*/
+:root {
+  --black: #{$black};
+  --gray: #{$gray};
+  --white: #{$white};
+  --dark-gray: #{darken($dark-gray, 10%)};
+  --black-light: #{$black-light};
+  --success: #{$success};
+  --success-dark: #{darken($success, 10%)};
+  --error: #{$error};
+  --error-dark: #{darken($error, 10%)};
+  --warning: #{$warning};
+  --warning-dark: #{darken($warning, 10%)};
+  --info: #{$info};
+  --info-dark: #{darken($info, 10%)};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --background-color: #{$background-color};
 }

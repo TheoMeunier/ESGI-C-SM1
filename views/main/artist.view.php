@@ -1,7 +1,20 @@
+<div class="profile">
+	<img class="profile-image" src="https://apprendre-la-photo.fr/wp-content/uploads/2021/01/news_31916_0.jpg" alt="Profile Image">
+	<div class="profile-info">
+		<h2 id="artist-name" class="profile-name">Alex Shuper</h2>
+		<p class="profile-title">Digital Artist & Photographer</p>
+		<p class="profile-location">Liepaja, Latvia</p>
+		<h3 class="profile-interests-title">Centres d'intérêt</h3>
+		<ul class="profile-interests-list">
+			<li>Art Numérique</li>
+			<li>Rendus 3D</li>
+			<li>Fonds D'écran HD</li>
+			<li>Photographie</li>
+		</ul>
+	</div>
+</div>
 <div class="artist-info" id="artist-info">
-    <h1 id="artist-name"></h1>
-    <div id="artist-works" class="gallery"></div>
-    <a href="/gallery" id="back-to-gallery" class="back-to-gallery">Back to Gallery</a>
+    <div id="artist-works" class="gallery gallery-container"></div>
 </div>
 <div class="modal" id="modal">
     <div class="modal-content">
@@ -15,3 +28,4 @@
         </div>
     </div>
 </div>
+<a href="/gallery" id="back-to-gallery" class="back-to-gallery button button-black">Back to Gallery</a>
