@@ -1,0 +1,22 @@
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  
+    img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 8px;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  

@@ -2,6 +2,11 @@
 @import "components/reset";
 @import "components/header";
 @import "components/footer";
+@import "components/gallery-card";
+@import "components/gallery-photo";
+@import "components/gallery-modal";
+@import "gallery.scss";
+@import "artist.scss";
 
 main {
   margin: 0 auto;

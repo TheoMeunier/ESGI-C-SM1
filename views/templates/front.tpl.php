@@ -1,20 +1,30 @@
 <?php include '../views/component/meta.view.php'; ?>
 <body>
 <header>
-	<nav>
-		<ul>
-			<li><a href="/">accueil</a></li>
-			<li><a href="/gallery">portfolio</a></li>
-		</ul>
-	</nav>
-	<h1>Henri Cartier-Bresson</h1>
-	<nav>
-		<ul>
-			<li><a href="/contact">contact</a></li>
-			<li><a href="/a-propos">a-propos</a></li>
-		</ul>
-	</nav>
-</header>
+    <div class="logo">PHILPHOTO</div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <ul id="navList">
+        <li>
+          <a href="/" >Home</a>
+        </li>
+        <li>
+          <a href="/gallery">Portfolio</a>
+        </li>
+        <li>
+          <a href="/aboutus">A propos</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
 <main>
     <?php include $this->viewName; ?>
 </main>
