@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const artistName = extractArtistNameFromUrl();
 
-    document.title = `Artist Profile - ${artistName}`;
-    artistNameElement.textContent = `Artist: ${artistName}`;
+    artistNameElement.textContent = `Henri Cartier-Bresson`;
 
     fetchArtistWorks(artistName);
 

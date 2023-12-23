@@ -1,1 +1,1 @@
-<?php echo $this->includeComponent('form', $config); ?>
+<?php echo $this->includeComponent('form', $configForm); ?>

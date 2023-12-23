@@ -34,7 +34,9 @@ class SecurityController extends AbstractController
                 $this->error('Identifiants ou mot de passe incorrects');
             }
         }
-        return $this->render('security/login', 'front');
+        return $this->render('security/login', 'front', [
+            'configForm' => $form->getConfig(),
+        ]);
     }
 
 
@@ -65,7 +67,7 @@ class SecurityController extends AbstractController
         }
 
         return $this->render('security/register', 'front', [
-            'config' => $form->getConfig(),
+            'configForm' => $form->getConfig(),
         ]);
     }
 
@@ -80,7 +82,7 @@ class SecurityController extends AbstractController
         $form   = new ResetPasswordType();
         $config = $form->getConfig();
         $myView = new View('security/resetPassword', 'front', [
-            'config' => $config,
+            'configForm' => $config,
         ]);
     }
 }

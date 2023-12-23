@@ -1,9 +1,10 @@
 <section>
-	<fieldset>
-		<legend><h2>Se connecter</h2></legend>
-		<form method="<?php echo $config['config']['method']; ?>"
-		      action="<?php echo $config['config']['action']; ?>"
-		      class="<?php echo $config['config']['class']; ?>">
+
+	<legend><h2>Se connecter</h2></legend>
+	<form method="<?php echo $config['config']['method']; ?>"
+	      action="<?php echo $config['config']['action']; ?>"
+	      class="<?php echo $config['config']['class']; ?>">
+		<fieldset>
 
             <?php foreach ($config['inputs'] as $name => $configInput) { ?>
 				<label for="<?php echo $name; ?>"><?php echo $name; ?></label>
@@ -20,6 +21,7 @@
             <?php if (!empty($data['error'])) { ?>
 				<p class="error"><?php echo $data['error']; ?></p>
             <?php } ?>
-		</form>
-	</fieldset>
+		</fieldset>
+	</form>
+
 </section>
