@@ -1,7 +1,7 @@
 <?php echo $this->includeComponent('meta', $config = []); ?>
 <body>
 <header>
-    <?php echo $this->includeComponent('navbar', $config = []); ?>
+    <?php echo $this->includeComponent('navbarAdmin', $config = []); ?>
 </header>
 <main>
     <?php include $this->viewName; ?>

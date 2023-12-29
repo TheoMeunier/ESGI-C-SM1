@@ -1,7 +1,7 @@
 <?php
 
 namespace Core\Views;
-use Core\Config\ConfigAssets;
+
 class View
 {
     private string $templateName;
@@ -36,13 +36,12 @@ class View
         $this->data[$key]=$value;
     }
 
-
     public function includeComponent(string $component, array $config, array $variables = []): void
     {
-        if (!file_exists('../views/component/'.$component.'.php')) {
+        if (!file_exists('../views/components/'.$component.'.php')) {
             exit('Le composant views/components/'.$component.".php n'existe pas");
         }
-        include '../views/component/'.$component.'.php';
+        include '../views/components/'.$component.'.php';
     }
 
     public function setVariables(array $variables): void

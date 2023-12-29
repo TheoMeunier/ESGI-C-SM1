@@ -10,6 +10,6 @@
     <ul>
         <li><a href="/contact">contact</a></li>
         <li><a href="/a-propos">a-propos</a></li>
-	    <li><a href="/login"><?= icon('user-round')?></a></li>
+	    <li><a href="/login"><?php echo icon('user-round'); ?></a></li>
     </ul>
 </nav>

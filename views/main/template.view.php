@@ -13,7 +13,7 @@
 			<ul>
 				<li><a href="/contact">Contact</a></li>
 				<li><a href="/a-propos">À Propos</a></li>
-				<li><a><?= icon('user-round') ?></a></li>
+				<li><a><?php echo icon('user-round'); ?></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -24,9 +24,9 @@
 	<footer>
 		<div class="mention-legale">
 			<ul>
-				<li><?= icon('twitter') ?> </li>
-				<li><?= icon('facebook') ?> </li>
-				<li><?= icon('instagram') ?> </li>
+				<li><?php echo icon('twitter'); ?> </li>
+				<li><?php echo icon('facebook'); ?> </li>
+				<li><?php echo icon('instagram'); ?> </li>
 			</ul>
 			<p>&copy; - Tous droits réservés - 2023</p>
 			<ul>
@@ -40,14 +40,14 @@
 <section>
 	<h2>Icon</h2>
 	<hr>
-    <?= icon('user-round') ?>
-    <?= icon('log-in') ?>
-    <?= icon('log-out') ?>
-    <?= icon('menu') ?>
-    <?= icon('x') ?>
-    <?= icon('twitter') ?>
-    <?= icon('facebook') ?>
-    <?= icon('instagram') ?>
+    <?php echo icon('user-round'); ?>
+    <?php echo icon('log-in'); ?>
+    <?php echo icon('log-out'); ?>
+    <?php echo icon('menu'); ?>
+    <?php echo icon('x'); ?>
+    <?php echo icon('twitter'); ?>
+    <?php echo icon('facebook'); ?>
+    <?php echo icon('instagram'); ?>
 </section>
 <section>
 	<h2>Bouton</h2>
@@ -129,10 +129,10 @@
 	<h2>Gallery</h2>
 	<hr>
 	<div class="gallery-container">
-        <?php for ($i = 0; $i < 4; $i++): ?>
+        <?php for ($i = 0; $i < 4; ++$i) { ?>
 			<img src="https://images.unsplash.com/photo-1702700630321-4e3a9deb8750?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 			     alt="">
-        <?php endfor; ?>
+        <?php } ?>
 	</div>
 </section>
 

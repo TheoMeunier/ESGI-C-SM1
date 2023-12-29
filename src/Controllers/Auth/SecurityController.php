@@ -34,11 +34,11 @@ class SecurityController extends AbstractController
                 $this->error('Identifiants ou mot de passe incorrects');
             }
         }
+
         return $this->render('security/login', 'front', [
             'configForm' => $form->getConfig(),
         ]);
     }
-
 
     public function register(): View
     {
