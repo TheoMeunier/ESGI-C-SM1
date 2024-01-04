@@ -77,4 +77,13 @@ class Model extends DB
 
         return config('database.prefix').strtolower($table);
     }
+
+    private function getAllUsers(): array
+    {
+        $sql           = 'SELECT * FROM '.$this->table;
+        $queryPrepared = $this->pdo->prepare($sql);
+        $queryPrepared->execute();
+
+        return $queryPrepared->fetchAll();
+    }
 }

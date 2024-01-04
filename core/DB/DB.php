@@ -9,9 +9,19 @@ class DB
     public function __construct()
     {
         try {
-            $this->pdo = new \PDO(dsn: 'mysql:host='.config('database.host').';dbname='.config('database.database').';charset=utf8', username: config('database.username'), password: config('database.password'));
+            $this->pdo = new \PDO(
+                'mysql:host=esgi-c-sm_database;dbname=root;charset=utf8',
+                'root',
+                'password'
+            );
         } catch (\PDOException $e) {
             echo 'Erreur SQL : '.$e->getMessage();
         }
     }
+
+    public function prepare(string $sql): object
+    {
+        return $this->pdo->prepare($sql);
+    }
+
 }

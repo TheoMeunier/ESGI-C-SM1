@@ -1,7 +1,8 @@
-<?php
+<!-- <?php
 
 use App\Controllers\AboutUsController;
 use App\Controllers\Admin\AdminController;
+use App\Controllers\Admin\UserController;
 use App\Controllers\Auth\SecurityController;
 use App\Controllers\ContactController;
 use App\Controllers\GalleryController;
@@ -26,7 +27,14 @@ $router->get('/reset-password', [SecurityController::class, 'resetPassword']);
 
 $router->get('/admin/dashboard', [AdminController::class, 'dashboard']);
 $router->get('/admin/comments', [AdminController::class, 'comments']);
-$router->get('/admin/roles', [AdminController::class, 'roles']);
+$router->get('/admin/users', [UserController::class, 'users']);
+$router->get('/admin/users/create', [UserController::class, 'create']);
+$router->post('/admin/users/update/{id}', [UserController::class, 'update']);
+$router->post('/admin/users/delete/{id}', [UserController::class, 'delete']);
 $router->get('/admin/pages', [AdminController::class, 'pages']);
 
+
+
+// Run the router
 $router->run();
+
