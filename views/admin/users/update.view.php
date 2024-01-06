@@ -1,23 +1,22 @@
-<!-- Views/admin/users/edit.php -->
+<!-- Views/admin/users/update.php -->
 
-<h1>Modifier l'Utilisateur <?= $user['username'] ?></h1>
+<h1>Modifier l'Utilisateur</h1>
 
-<!-- Formulaire d'édition d'utilisateur -->
-<form method="post" action="/admin/users/update/<?= $user['id'] ?>">
-    <!-- Champs du formulaire pré-remplis avec les informations de l'utilisateur -->
-    <!-- Assurez-vous d'ajuster les champs en fonction de votre base de données -->
+<!-- Formulaire de mise à jour d'utilisateur -->
+<form action="/admin/users/update/<?php echo $user['id']; ?>" method="post">
+    <!-- Champs du formulaire (username, email, password, etc.) pré-remplis avec les données de l'utilisateur -->
     <label for="username">Nom d'utilisateur:</label>
-    <input type="text" name="username" value="<?= $user['username'] ?>" required>
+    <input type="text" name="username" value="<?php echo $user['username']; ?>" required>
 
     <label for="email">Email:</label>
-    <input type="email" name="email" value="<?= $user['email'] ?>" required>
+    <input type="email" name="email" value="<?php echo $user['email']; ?>" required>
 
-    <label for="password">Nouveau mot de passe:</label>
-    <input type="password" name="password">
+    <label for="password">Mot de passe:</label>
+    <input type="password" name="password" required>
 
     <!-- Ajoutez les autres champs de la table esgi_user ici -->
     <label for="avatar">Avatar:</label>
-    <input type="text" name="avatar" value="<?= $user['avatar'] ?>">
+    <input type="text" name="avatar" value="<?php echo $user['avatar']; ?>">
 
     <!-- Ajoutez d'autres champs au besoin -->
 

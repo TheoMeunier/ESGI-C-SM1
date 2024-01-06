@@ -29,8 +29,10 @@ $router->get('/admin/dashboard', [AdminController::class, 'dashboard']);
 $router->get('/admin/comments', [AdminController::class, 'comments']);
 $router->get('/admin/users', [UserController::class, 'users']);
 $router->get('/admin/users/create', [UserController::class, 'create']);
-$router->post('/admin/users/update/{id}', [UserController::class, 'update']);
-$router->post('/admin/users/delete/{id}', [UserController::class, 'delete']);
+$router->post('/admin/users/store', [UserController::class, 'store']);
+$router->get('/admin/users/update/{id}', [UserController::class, 'update']);
+$router->post('/admin/users/update/{id}', [UserController::class, 'updateSubmit']);
+$router->post('/admin/users/delete/{id}', [UserController::class, 'delete']); // Utilisez {id} pour capturer l'ID dans l'URL
 $router->get('/admin/pages', [AdminController::class, 'pages']);
 
 

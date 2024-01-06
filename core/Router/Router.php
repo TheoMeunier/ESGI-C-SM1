@@ -38,18 +38,26 @@ class Router
         $uri    = strtolower($_SERVER['REQUEST_URI']);
         $uri    = strtok($uri, '?');
         $uri    = strlen($uri) > 1 ? rtrim($uri, '/') : $uri;
+
         foreach ($this->routes as $route) {
-            if ($route['uri'] === $uri) {
+            $routePattern = preg_replace('/\/{([a-zA-Z0-9_]+)}/', '/([^\/]+)', $route['uri']);
+            $routePattern = '#^' . $routePattern . '$#';
+
+            if ($method === $route['method'] && preg_match($routePattern, $uri, $matches)) {
+                array_shift($matches); // Remove the full match, leaving only parameter values
+
                 $callable = $route['callable'];
-                if (is_array($callable) && 2 === count($callable)) {
-                    include '../src/'.str_replace(['App\\', '\\'], ['', '/'], $callable[0]).'.php';
+
+                if (is_array($callable) && count($callable) === 2) {
+                    include '../src/' . str_replace(['App\\', '\\'], ['', '/'], $callable[0]) . '.php';
                     $controllerName = $callable[0];
                     $methodName     = $callable[1];
+
                     if (class_exists($controllerName)) {
                         $controller = new $controllerName();
 
                         if (method_exists($controller, $methodName)) {
-                            $controller->$methodName();
+                            call_user_func_array([$controller, $methodName], $matches);
                         } else {
                             http_response_code(500);
                             echo 'L\'action n\'existe pas dans le controller';
@@ -66,6 +74,7 @@ class Router
                 return;
             }
         }
+
         include '../src/Controllers/ErrorController.php';
         $errorController = new ErrorController();
         $errorController->page404();
