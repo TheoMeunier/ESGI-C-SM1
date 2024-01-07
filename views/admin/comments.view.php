@@ -1,6 +1,8 @@
-<?php echo $this->includeComponent('sideBarAdmin', $config = []);
-    <h1>Admin - Comments</h1>
+<div class="admin-container">
 
+<?php echo $this->includeComponent('sideBarAdmin', $config = []);?>
+<section>
+    <h2>Admin - Comments</h2>
     <?php if (!empty($comments) && is_array($comments)): ?>
         <table border="1">
             <thead>
@@ -25,7 +27,7 @@
                         <td><?= $comment['updated_at']; ?></td>
                         <td>
                             <form method="post" action="/admin/comments/delete/<?= $comment['id'] ?>" onsubmit="return confirm('Are you sure you want to delete this comment?');">
-                                <button type="submit">Delete</button>
+                                <button type="submit" class="button button-red">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -36,3 +38,6 @@
         <p>No comments found.</p>
     <?php endif; ?>
 
+    </section>
+    
+</div>

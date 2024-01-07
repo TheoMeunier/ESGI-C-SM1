@@ -32,6 +32,7 @@ class UserController
     // Display the update form or process the form submission
     public function update($id): void
     {
+        $myView = new View('admin/users/update', 'back');
         try {
             $this->validateId($id);
 

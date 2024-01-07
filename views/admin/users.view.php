@@ -1,6 +1,8 @@
-<h1>Liste des Utilisateurs</h1>
-
-<a href="/admin/users/create">Ajouter un Utilisateur</a>
+<div class="admin-container">
+<?php echo $this->includeComponent('sideBarAdmin', $config = []);?>
+<section>
+<h2>Liste des Utilisateurs</h2>
+<a class="button button-black" href="/admin/users/create">Ajouter un Utilisateur</a>
 
 <?php if (!empty($users) && is_array($users)): ?>
     <table>
@@ -32,7 +34,7 @@
                         <a class="button button-blue" href="/admin/users/update/<?= $user['id'] ?>">Modifier</a>
                         <form method="post" action="/admin/users/delete/<?= $user['id'] ?>" onsubmit="return confirm('Are you sure you want to delete this user?');">
                             <button class="button button-red" type="submit">Supprimer</button>
-                        </form>
+                        </form>     
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -41,3 +43,8 @@
 <?php else: ?>
     <p>Aucun utilisateur trouvé.</p>
 <?php endif; ?>
+
+</div>
+
+</section>
+
