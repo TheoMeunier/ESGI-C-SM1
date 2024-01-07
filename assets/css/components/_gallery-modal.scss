@@ -1,0 +1,84 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  border-radius: .25rem;
+  z-index: 2;
+
+}
+
+.modal-content {
+  position: relative;
+  max-width: 50%;
+  margin: 2rem auto;
+  background-color: var(--gray);
+  padding: 2.5rem;
+  border-radius: .25rem;
+  overflow: auto;
+  box-shadow: .25rem .25rem 0 var(--dark-gray);
+
+  .close {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: end;
+    display: block;
+  }
+
+  #modal-image {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: .25rem;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+
+  #modal-info {
+    margin-top: 1rem;
+  }
+
+  #user-name {
+    font-weight: bold;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--primary-dark);
+    }
+  }
+
+  #photo-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+  }
+
+  #comment {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: .25rem;
+    border: .15rem solid var(--dark-gray);
+    box-shadow: .25rem .25rem 0 var(--dark-gray);
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: var(--black);
+      font-weight: bold;
+    }
+  }
+  #add-comment {
+    display: block;
+    margin-left: auto;
+  }
+
+}

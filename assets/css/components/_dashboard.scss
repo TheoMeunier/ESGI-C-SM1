@@ -1,0 +1,40 @@
+.dashboard-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 10rem;
+
+  .dashboard-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .dashboard-card {
+      width: 20%;
+      background: var(--white);
+      border: var(--dark-gray) solid .2rem;
+      box-shadow: .25rem .25rem 0 var(--dark-gray);
+      border-radius: 1rem;
+      margin: 1rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      p {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 1rem;
+      }
+    }
+  }
+
+}

@@ -21,7 +21,7 @@ CREATE TABLE esgi_information_photograph
     country     VARCHAR(58),
     isDeleted   TINYINT(1) DEFAULT 0,
     created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP
+    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT FK_users_information_photograph FOREIGN KEY (user_id) REFERENCES esgi_user (id) ON DELETE CASCADE
 );
 
@@ -60,7 +60,7 @@ CREATE TABLE esgi_comment
     isReported TINYINT(1) DEFAULT 0,
     user_id    INT  NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT FK_users_comments FOREIGN KEY (user_id) REFERENCES esgi_user (id) ON DELETE CASCADE
 );
 
@@ -72,7 +72,7 @@ CREATE TABLE esgi_comment_reply
     user_id    INT  NOT NULL,
     comment_id INT  NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT FK_users_comment_reply FOREIGN KEY (user_id) REFERENCES esgi_user (id) ON DELETE CASCADE,
     CONSTRAINT FK_comments_comment_reply FOREIGN KEY (comment_id) REFERENCES esgi_comment (id) ON DELETE CASCADE
 );
@@ -98,7 +98,7 @@ CREATE TABLE esgi_material
     user_id     INT         NOT NULL,
     isDeleted   TINYINT(1) DEFAULT 0,
     created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP
+    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT FK_users_materials FOREIGN KEY (user_id) REFERENCES esgi_user (id)
 );
 
@@ -112,7 +112,7 @@ CREATE TABLE esgi_picture
     user_id     INT         NOT NULL,
     isDeleted   TINYINT(1) DEFAULT 0,
     created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP
+    updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT FK_users_pictures FOREIGN KEY (user_id) REFERENCES esgi_user (id)
 );
 

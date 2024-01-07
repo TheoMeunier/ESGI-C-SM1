@@ -1,0 +1,26 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    thead{
+        background-color: #f2f2f2;
+        tr{
+            th{
+                padding: 8px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                padding: 8px;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+}

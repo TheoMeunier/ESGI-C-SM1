@@ -1,0 +1,35 @@
+.alert {
+  padding: 1rem 1.25rem;
+  color: var(--black-light);
+  border: var(--black) solid .2rem;
+  box-shadow: .25rem .25rem 0 var(--black);
+  border-radius: .25rem;
+
+  &-success {
+    background-color: var(--success);
+    color: var(--white);
+    border: var(--success-dark) solid .2rem;
+    box-shadow: .25rem .25rem 0 var(--success-dark) ;
+  }
+
+  &-error {
+    background-color: var(--error);
+    color: var(--white);
+    border: var(--error-dark) solid .2rem;
+    box-shadow: .25rem .25rem 0 var(--error-dark)
+  }
+
+  &-warning {
+    background-color: var(--warning);
+    color: var(--white);
+    border: var(--warning-dark) solid .2rem;
+    box-shadow: .25rem .25rem 0 var(--warning-dark)
+  }
+
+  &-info {
+    background-color: var(--info);
+    color: var(--white);
+    border: var(--info-dark) solid .2rem;
+    box-shadow: .25rem .25rem 0 var(--info-dark)
+  }
+}

@@ -1,0 +1,37 @@
+.card-photo {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: .25rem;
+  max-width: 45rem;
+  box-shadow: .25rem .25rem 0 var(--dark-gray);
+
+  img {
+    border-radius: .25rem;
+    max-height: 30rem;
+    width: 100%;
+
+  }
+
+  .card-photo-info {
+    padding: 1rem;
+
+    .card-photo-author {
+      font-weight: bold;
+      font-size: 1.6rem;
+      margin: 0;
+      color: var(--primary-dark);
+    }
+
+    .card-photo-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+    }
+  }
+}

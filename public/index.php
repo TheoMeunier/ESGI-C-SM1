@@ -6,14 +6,9 @@ use App\Controllers\Auth\SecurityController;
 use App\Controllers\ContactController;
 use App\Controllers\GalleryController;
 use App\Controllers\MainController;
-use Core\Config\ConfigLoader;
 use Core\Router\Router;
 
 require __DIR__.'/../vendor/autoload.php';
-
-// Start read config file
-$config = new ConfigLoader();
-$config->load();
 
 $router = new Router();
 
@@ -21,6 +16,8 @@ $router->get('/', [MainController::class, 'home']);
 $router->get('/contact', [ContactController::class, 'contact']);
 $router->get('/a-propos', [AboutUsController::class, 'aboutUs']);
 $router->get('/gallery', [GalleryController::class, 'gallery']);
+$router->get('/template', [MainController::class, 'template']);
+$router->get('/artist', [MainController::class, 'artist']);
 
 $router->get('/login', [SecurityController::class, 'login']);
 $router->get('/register', [SecurityController::class, 'register']);

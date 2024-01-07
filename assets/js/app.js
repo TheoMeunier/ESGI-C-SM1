@@ -1,2 +1,5 @@
 import '../css/app.scss';
-console.log('Hello World');
+import './components/artist.js';
+import './components/gallery.js';
+import './components/header.js';
+import './components/dark-mode.js';

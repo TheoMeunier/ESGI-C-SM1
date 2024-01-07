@@ -1,0 +1,9 @@
+$gutter: 3rem;
+$cols: 12;
+
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    padding: 0 calc($gutter / 2);
+    width: calc(100% / $cols * $i);
+  }
+}

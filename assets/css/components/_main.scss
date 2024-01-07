@@ -1,0 +1,49 @@
+main{
+  margin: 0 auto;
+  min-height: 90vh;
+  padding: 2rem 10rem;
+  border-top: var(--dark-gray) solid .2rem;
+  border-bottom: var(--dark-gray) solid .2rem;
+  background: var(--white);
+  position: relative;
+
+  h1, h2 {
+    font-weight: bold;
+    font-family: 'Merriweather', sans-serif;
+    color: var(--black);
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2 {
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+    margin: 2rem 0;
+
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    text-align: justify;
+    margin: 2rem auto;
+  }
+
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
+}
+

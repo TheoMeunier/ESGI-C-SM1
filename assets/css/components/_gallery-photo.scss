@@ -1,0 +1,20 @@
+.gallery-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+
+  img {
+    max-width: 30rem;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.25s;
+    border-radius: .25rem;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+}

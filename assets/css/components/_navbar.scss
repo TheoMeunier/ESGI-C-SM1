@@ -1,0 +1,42 @@
+header {
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      align-items: center;
+      width: 100%;
+
+      li {
+        margin: 1rem;
+        border-bottom: .1rem solid var(--black);
+
+        &:hover {
+          margin: 1rem;
+          background: var(--black);
+          border-radius: .25rem;
+
+          a {
+            color: var(--white);
+          }
+        }
+
+        a {
+          color: var(--black);
+          font-weight: bold;
+          display: inline-block;
+          padding: .5rem 1.5rem;
+          cursor: pointer;
+
+          svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            display: inline-block;
+            vertical-align: center;
+          }
+        }
+
+      }
+    }
+  }
+}

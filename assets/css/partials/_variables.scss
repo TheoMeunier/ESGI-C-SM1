@@ -1,0 +1,73 @@
+/*Variables*/
+$black: #000;
+$gray: #fafafa;
+$white: #fff;
+$dark-gray: darken(#f2f2f2, 5%);
+$black-light: #121212;
+$success: #1ca93c;
+$error: #de2335;
+$warning: #eea43c;
+$info: #12a1b7;
+$primary-color: #f2f2f2;
+$secondary-color: #222222;
+$background-color: #222222;
+$primary: #416de7;
+
+$black-dark: #fff;
+$gray-dark: #222;
+$white-dark: #111;
+$dark-gray-dark: darken(#222, 5%);
+$black-light-dark: #fafafa;
+$success-dark: #1ca93c;
+$error-dark: #de2335;
+$warning-dark: #eea43c;
+$info-dark: #12a1b7;
+$primary-color-dark: #f2f2f2;
+$secondary-color-dark: #222222;
+$background-color-dark: #222222;
+$primary-dark: #416de7;
+
+/*Root*/
+:root {
+  --black: #{$black};
+  --gray: #{$gray};
+  --white: #{$white};
+  --dark-gray: #{$dark-gray};
+  --black-light: #{$black-light};
+  --primary: #{$primary};
+  --success: #{$success};
+  --success-dark: #{darken($success, 10%)};
+  --error: #{$error};
+  --error-dark: #{darken($error, 10%)};
+  --warning: #{$warning};
+  --warning-dark: #{darken($warning, 10%)};
+  --info: #{$info};
+  --info-dark: #{darken($info, 10%)};
+  --primary-color: #{$primary};
+  --primary-dark: #{darken($primary, 10%)};
+  --secondary-color: #{$secondary-color};
+  --background-color: #{$background-color};
+}
+:root.data-dark-mode {
+  --black: #{$black-dark};
+  --gray: #{$gray-dark};
+  --white: #{$white-dark};
+  --dark-gray: #{$dark-gray-dark};
+  --black-light: #{$black-light-dark};
+  --primary: #{$primary-dark};
+  --success: #{$success-dark};
+  --success-dark: #{darken($success-dark, 10%)};
+  --error: #{$error-dark};
+  --error-dark: #{darken($error-dark, 10%)};
+  --warning: #{$warning-dark};
+  --warning-dark: #{darken($warning-dark, 10%)};
+  --info: #{$info-dark};
+  --info-dark: #{darken($info-dark, 10%)};
+  --primary-color: #{$primary-dark};
+  --primary-dark: #{darken($primary, 10%)};
+  --secondary-color: #{$secondary-color-dark};
+  --background-color: #{$background-color-dark};
+}
+
+
+

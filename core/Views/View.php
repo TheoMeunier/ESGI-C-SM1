@@ -6,7 +6,7 @@ class View
 {
     private string $templateName;
     private string $viewName;
-    private array $variables = [];
+    private array $data = [];
 
     public function __construct(string $viewName, string $templateName = 'back', array $variables = [])
     {
@@ -31,14 +31,27 @@ class View
         $this->viewName = '../views/'.$viewName.'.view.php';
     }
 
+    public function assign(string $key, $value): void
+    {
+        $this->data[$key]=$value;
+    }
+
+    public function includeComponent(string $component, array $config, array $variables = []): void
+    {
+        if (!file_exists('../views/components/'.$component.'.php')) {
+            exit('Le composant views/components/'.$component.".php n'existe pas");
+        }
+        include '../views/components/'.$component.'.php';
+    }
+
     public function setVariables(array $variables): void
     {
-        $this->variables = $variables;
+        $this->data = $variables;
     }
 
     public function __destruct()
     {
-        extract($this->variables);
+        extract($this->data);
         include $this->templateName;
     }
 }
