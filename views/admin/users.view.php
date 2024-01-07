@@ -29,9 +29,9 @@
                     <td><?= $user['created_at'] ?></td>
                     <td><?= $user['updated_at'] ?></td>
                     <td>
-                        <a href="/admin/users/update/<?= $user['id'] ?>">Modifier</a>
+                        <a class="button button-blue" href="/admin/users/update/<?= $user['id'] ?>">Modifier</a>
                         <form method="post" action="/admin/users/delete/<?= $user['id'] ?>" onsubmit="return confirm('Are you sure you want to delete this user?');">
-                            <button type="submit">Supprimer</button>
+                            <button class="button button-red" type="submit">Supprimer</button>
                         </form>
                     </td>
                 </tr>

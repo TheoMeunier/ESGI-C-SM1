@@ -47,35 +47,34 @@ class UserController
         }
     }
 
-    // Process the update form submission
-public function updateSubmit($id): void
-{
-    try {
-        $this->validateId($id);
-
-        // Validez les données du formulaire ici (non inclus pour la simplicité)
-
-        // Exemple de mise à jour dans la base de données (utilisez votre propre logique)
-        $data = [
-            'username' => $_POST['username'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-            'avatar' => $_POST['avatar'], // Ajoutez d'autres champs selon vos besoins
-        ];
-
-        $query = $this->pdo->prepare('UPDATE esgi_user SET username = :username, email = :email, password = :password, avatar = :avatar WHERE id = :id');
-        $data['id'] = $id;
-        $query->execute($data);
-
-        // Redirige vers la liste des utilisateurs après la mise à jour
-        $this->redirectToUserList();
-    } catch (\PDOException $e) {
-        $this->handleError('Database Error updating user: ' . $e->getMessage());
-    } catch (\Exception $e) {
-        $this->handleError('General Error updating user: ' . $e->getMessage());
+    public function updateSubmit($id): void
+    {
+        try {
+            $this->validateId($id);
+    
+            // Validez les données du formulaire ici (non inclus pour la simplicité)
+    
+            // Exemple de mise à jour dans la base de données (utilisez votre propre logique)
+            $data = [
+                'username' => $_POST['username'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'avatar' => $_POST['avatar'],
+                'updated_at' => date('Y-m-d H:i:s'), // Include updated_at with the current timestamp
+            ];
+    
+            $query = $this->pdo->prepare('UPDATE esgi_user SET username = :username, email = :email, password = :password, avatar = :avatar, updated_at = :updated_at WHERE id = :id');
+            $data['id'] = $id;
+            $query->execute($data);
+    
+            // Redirige vers la liste des utilisateurs après la mise à jour
+            $this->redirectToUserList();
+        } catch (\PDOException $e) {
+            $this->handleError('Database Error updating user: ' . $e->getMessage());
+        } catch (\Exception $e) {
+            $this->handleError('General Error updating user: ' . $e->getMessage());
+        }
     }
-}
-
     // Display the update form
     private function displayUpdateForm($id): void
     {
