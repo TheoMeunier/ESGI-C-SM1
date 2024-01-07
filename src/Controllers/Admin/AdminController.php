@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Admin;
 
+use App\Models\Comment;
 use Core\Views\View;
 
 class AdminController
@@ -13,7 +14,12 @@ class AdminController
 
     public function comments(): void
     {
-        $myView = new View('admin/comments', 'back');
+        // Retrieve comments from the database or any data source
+        $comments = Comment::findAll(); // Assuming a static method for retrieving all comments
+
+        // Render the view with the comments data
+        $myView = new View('admin/comments', 'back', ['comments' => $comments]);
+        $myView->render();
     }
     public function pages(): void
     {
