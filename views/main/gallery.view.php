@@ -23,8 +23,8 @@
 			<p id="user-name">Username</p>
 			<p id="photo-title"></p>
 			<label for="comment"></label>
-			<textarea id="comment" placeholder="Add a comment"></textarea>
-			<button class="button button-green" id="add-comment">Add Comment</button>
+			<textarea id="comment" placeholder="Commentaire..."></textarea>
+			<button class="button button-blue" id="add-comment">Ajouter le commentaire</button>
 		</div>
 	</div>
 </div>

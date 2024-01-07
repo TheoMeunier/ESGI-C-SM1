@@ -5,6 +5,8 @@
 @import "partials/functions";
 @import "partials/grid";
 
+@import "components/main";
+@import "components/dark-mode";
 @import "components/header";
 @import "components/alerts";
 @import "components/buttons";
@@ -13,6 +15,9 @@
 @import "components/gallery-card";
 @import "components/gallery-photo";
 @import "components/gallery-modal";
+@import "components/card-photo";
 @import "components/form";
 @import "components/tableau";
-@import "components/main";
+@import "components/side-bar-admin";
+@import "components/dashboard";
+

@@ -3,12 +3,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  margin: 2rem auto;
+
   img {
-    width: 30rem;
+    max-width: 30rem;
     height: auto;
     object-fit: cover;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.25s;
     border-radius: .25rem;
 
     &:hover {

@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openModal = (photo) => {
         modalImage.src = photo.urls.regular;
-        userName.textContent = `By: ${photo.user.username}`;
+        userName.textContent = `${photo.user.username}`;
         const encodedArtistName = encodeURIComponent(photo.user.username);
         userName.setAttribute('data-artist-name', encodedArtistName);
         userName.setAttribute('data-artist-id', photo.user.id);
-        photoTitle.textContent = `Title: ${photo.alt_description}`;
+        photoTitle.textContent = `${photo.alt_description}`;
         modal.style.display = 'block';
     };
 

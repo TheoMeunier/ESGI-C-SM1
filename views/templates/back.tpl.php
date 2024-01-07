@@ -3,7 +3,7 @@
 <header>
     <?php echo $this->includeComponent('navbarAdmin', $config = []); ?>
 </header>
-<main>
+<main class="main-admin">
     <?php include $this->viewName; ?>
 </main>
 <?php echo $this->includeComponent('footer', $config = []); ?>

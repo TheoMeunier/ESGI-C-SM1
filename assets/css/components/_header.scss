@@ -1,12 +1,18 @@
 @import "navbar";
-header{
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4rem;
+  background: var(--gray);
 }
-header h1{
+
+header h1 {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
+  font-family: 'Merriweather', sans-serif;
+  padding: 1.5rem;
+  color: var(--black);
 }

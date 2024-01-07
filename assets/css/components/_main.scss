@@ -1,13 +1,16 @@
 main{
   margin: 0 auto;
   min-height: 90vh;
-  padding: 5rem 10rem;
+  padding: 2rem 10rem;
   border-top: var(--dark-gray) solid .2rem;
   border-bottom: var(--dark-gray) solid .2rem;
-  background: var(--gray);
+  background: var(--white);
+  position: relative;
 
   h1, h2 {
     font-weight: bold;
+    font-family: 'Merriweather', sans-serif;
+    color: var(--black);
   }
 
   h1 {
@@ -16,6 +19,7 @@ main{
   }
 
   h2 {
+    padding-top: 1rem;
     font-size: 2rem;
   }
 
@@ -36,11 +40,10 @@ main{
     margin: 2rem auto;
   }
 
-  a {
-    color: var(--black);
-    font-weight: bold;
-    display: inline-block;
-    margin: 1rem 0;
-  }
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
 }
 

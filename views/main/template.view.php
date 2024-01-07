@@ -21,15 +21,15 @@
 <section>
 	<h2>Footer</h2>
 	<hr>
-	<footer>
+	<footer class="footer-container">
 		<div class="mention-legale">
-			<ul>
-				<li><?php echo icon('twitter'); ?> </li>
-				<li><?php echo icon('facebook'); ?> </li>
-				<li><?php echo icon('instagram'); ?> </li>
+			<ul class="social-icons">
+				<li><a href="#"><?php echo icon('twitter'); ?></a> </li>
+				<li><a href="#"><?php echo icon('facebook'); ?></a></li>
+				<li><a href="#"><?php echo icon('instagram'); ?></a></li>
 			</ul>
-			<p>&copy; - Tous droits réservés - 2023</p>
-			<ul>
+			<p>&copy; - Shutterview - Tous droits réservés | 2023 - <?php echo date('Y'); ?></p>
+			<ul class="legal-links">
 				<li><a href="#">Mentions Légales</a></li>
 				<li><a href="#">CGU</a></li>
 				<li><a href="#">Confidentialité</a></li>
@@ -55,11 +55,15 @@
 	<button class="button">Button Simple</button>
 	<button class="button button-black">Bouton noir</button>
 	<button class="button button-white">Bouton blanc</button>
+	<button class="button button-green">Bouton vert</button>
+	<button class="button button-red">Bouton rouge</button>
+	<button class="button button-blue">Bouton bleu</button>
 	<br>
 	<h2>Taille des boutons</h2>
 	<hr>
 	<button class="button button-lg">Bouton Large</button>
 	<button class="button button-md">Bouton Moyen</button>
+	<button class="button button-sm">Bouton Petit</button>
 </section>
 <section>
 	<h2>Alerte</h2>
@@ -135,12 +139,24 @@
         <?php } ?>
 	</div>
 </section>
+<section>
+	<h2>Card Photo</h2>
+	<hr>
+	<div class="card-photo">
+		<img src="https://images.unsplash.com/photo-1702700630321-4e3a9deb8750?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		     alt="">
+		<div class="card-photo-info">
+			<p class="card-photo-author">Author</p>
+			<p class="card-photo-title">Photo Title</p>
+		</div>
+	</div>
+</section>
 
 <section>
 	<h2>Modale</h2>
 	<hr>
 	<div class="modal-content">
-		<span class="close" id="close-modal">&times;</span>
+		<span class="close" id="close-modal"><?php echo icon('x'); ?></span>
 		<img src="https://apprendre-la-photo.fr/wp-content/uploads/2021/01/news_31916_0.jpg" id="modal-image"
 		     alt="Enlarged Image">
 		<div id="modal-info">
@@ -148,7 +164,7 @@
 			<p id="photo-title"></p>
 			<label for="comment"></label>
 			<textarea id="comment" placeholder="Add a comment"></textarea>
-			<button class="button button-green" id="add-comment">Add Comment</button>
+			<button class="button button-blue" id="add-comment">Add Comment</button>
 		</div>
 	</div>
 

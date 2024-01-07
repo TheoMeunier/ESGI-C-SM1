@@ -1,5 +1,4 @@
-/* FOOTER */
-footer {
+.footer-container {
   background-color: var(--black-light);
   color: var(--white);
   width: 100%;
@@ -10,7 +9,7 @@ footer {
     background: var(--black);
     padding: 2rem 5rem;
 
-    ul {
+    .social-icons {
       display: flex;
       align-items: center;
 
@@ -18,12 +17,26 @@ footer {
         margin: 0 1rem;
 
         a {
-          color: #fff;
-          font-weight: normal;
+          color: var(--white);
+          text-decoration: none;
+        }
+        svg{
+          color: var(--white);
+        }
+      }
+    }
+    .legal-links {
+      display: flex;
+      align-items: center;
+
+      li {
+        margin: 0 1rem;
+
+        a {
+          color: var(--white);
           text-decoration: none;
         }
       }
     }
   }
-
 }

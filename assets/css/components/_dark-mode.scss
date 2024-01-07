@@ -1,0 +1,9 @@
+.dark-mode {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  background-color: var(--dark-gray);
+  padding: .5rem;
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+}
